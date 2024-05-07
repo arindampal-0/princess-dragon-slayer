@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxnv3tugaqa6n"]
+[gd_scene load_steps=14 format=3 uid="uid://bxnv3tugaqa6n"]
 
 [ext_resource type="PackedScene" uid="uid://tr1a3vpplir0" path="res://scenes/player.tscn" id="1_d2hd6"]
 [ext_resource type="Texture2D" uid="uid://btds6uapvakmg" path="res://assets/sprites/world_tileset.png" id="1_ngfyw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bngam3mo8fngw" path="res://scenes/coin.tscn" id="4_gx25u"]
 [ext_resource type="PackedScene" uid="uid://b7s3qtycax8fm" path="res://scenes/killzone.tscn" id="5_doenp"]
 [ext_resource type="PackedScene" uid="uid://cxem5qdbv5m6i" path="res://scenes/slime.tscn" id="6_4qet6"]
+[ext_resource type="FontFile" uid="uid://duog1vxbnamyi" path="res://assets/fonts/PixelOperator8.ttf" id="7_i2e8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wq1o"]
 texture = ExtResource("1_ngfyw")
@@ -515,3 +516,54 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_4qet6")]
 position = Vector2(519, 82)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -92.0
+offset_top = 21.0
+offset_right = -1.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_i2e8t")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 687.0
+offset_top = -54.0
+offset_right = 781.0
+offset_bottom = -42.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_i2e8t")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 360.0
+offset_top = 70.0
+offset_right = 454.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_i2e8t")
+theme_override_font_sizes/font_size = 8
+text = "Falling Hurts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 548.0
+offset_top = 43.0
+offset_right = 586.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_i2e8t")
+theme_override_font_sizes/font_size = 8
+text = "Slime kills!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
